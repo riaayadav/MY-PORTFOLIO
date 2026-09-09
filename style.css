@@ -42,3 +42,35 @@
 @media (prefers-reduced-motion: reduce) {
   .hero-visual .portrait-card { animation: none; }
 }
+
+/* Full-image 360-degree rotation, with room for every corner. */
+.hero-visual .portrait-card {
+  width: min(66%, 320px);
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 0;
+  overflow: visible;
+  transform: none;
+  animation: portrait-circle 24s linear infinite;
+}
+.hero-visual .portrait-card img {
+  object-fit: contain;
+  border-radius: 0;
+}
+.hero-visual .portrait-shade,
+.hero-visual .portrait-caption { display: none; }
+.hero-visual .portrait-outline {
+  width: min(96%, 465px);
+  aspect-ratio: 1;
+  height: auto;
+  border-radius: 50%;
+  transform: none;
+  animation: none;
+}
+@keyframes portrait-circle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual .portrait-card { animation: none; transform: none; }
+}
