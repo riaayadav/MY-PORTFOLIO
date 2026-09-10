@@ -1,0 +1,24 @@
+/* Hide the native pointer only after the replacement is initialized and visible. */
+html.custom-cursor,html.custom-cursor *{cursor:none!important}
+html.custom-cursor .cursor{display:flex!important;opacity:1}
+.cursor{width:20px;height:20px;margin:-10px;border:1.5px solid #f58b45;background:#f58b4512;border-radius:50%;box-shadow:0 0 14px #f58b4530;align-items:center;justify-content:center;transition:width .18s,height .18s,margin .18s,border-radius .18s,background .18s,box-shadow .18s;pointer-events:none!important}
+.cursor:before{width:4px;height:4px;background:#ffb77f}
+.cursor span{font:600 10px/1 monospace;color:#fff0e5;letter-spacing:1px}
+.cursor.is-link{width:42px;height:42px;margin:-21px;background:#f58b4524;border-color:#ffa160;box-shadow:0 0 20px #f58b4529}
+.cursor.is-button{width:48px;height:36px;margin:-18px -24px;border-radius:7px;background:#f58b4540;box-shadow:0 0 24px #f58b4544}
+.cursor.is-image{width:66px;height:66px;margin:-33px;border-radius:50%;background:#a75520dc;border-color:#ffb578;box-shadow:0 0 30px #f58b4544}
+.cursor.is-link:before,.cursor.is-button:before,.cursor.is-image:before{display:none}
+.cursor.is-link span,.cursor.is-button span{font-size:20px}
+.cursor.is-pressed{background:#f58b4570;box-shadow:0 0 10px #f58b4590}
+@media(hover:hover) and (pointer:fine){
+ .portrait-original img{transition:filter .5s,opacity .5s}
+ .portrait-texture{transition:opacity .5s}
+ .portrait-original:hover img{filter:grayscale(.15) contrast(1.05) brightness(.95);opacity:1}
+ .portrait-original:hover .portrait-texture{opacity:.22}
+ .portrait-original{transition:filter .4s}
+ .portrait-original:hover{filter:drop-shadow(0 0 18px #f58b4528)}
+ .desktop-nav a:hover b{max-width:90px;opacity:1}
+ .project-preview:hover{border-color:#f58b45;box-shadow:0 0 22px #f58b4525}
+ .skill-card:hover,.bento-card:hover{border-color:#b57950}
+}
+@media(prefers-reduced-motion:reduce){html.custom-cursor,html.custom-cursor *{cursor:auto!important}html.custom-cursor .cursor{display:none!important}.portrait-original img,.portrait-texture{transition:none}}
