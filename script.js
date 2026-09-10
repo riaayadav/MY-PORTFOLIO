@@ -1,4 +1,6 @@
 import { initCustomCursor } from './cursor.js';
+import { initLoader } from './loader.js';
+initLoader();
 initCustomCursor();
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
