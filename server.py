@@ -3,6 +3,7 @@ import socketserver
 import os
 import sys
 import mimetypes
+import webbrowser
 
 DEFAULT_PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 5173
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
@@ -37,8 +38,10 @@ def run_server(port=DEFAULT_PORT):
     for p in candidate_ports:
         try:
             httpd = socketserver.TCPServer(("127.0.0.1", p), PortfolioHTTPRequestHandler)
-            print(f"Server started successfully at http://127.0.0.1:{p}")
+            url = f"http://127.0.0.1:{p}"
+            print(f"Server started successfully at {url}")
             sys.stdout.flush()
+            webbrowser.open(url)
             httpd.serve_forever()
             return
         except OSError as e:
