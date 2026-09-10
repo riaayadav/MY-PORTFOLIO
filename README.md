@@ -9,7 +9,7 @@ Install with `pnpm install`, then use `pnpm dev`. Build with `pnpm build`; `pnpm
 ## Edit
 
 - `index.html`: content, links, and all seven portfolio sections.
-- `style.css`, `tech.css`, and `reference-layout.css`: charcoal-and-orange theme, floating numbered navigation, textured monochrome portrait, responsive layouts, and reduced-motion support.
+- `style.css`, `tech.css`, and `reference-layout.css`: charcoal-and-purple theme, floating numbered navigation, textured monochrome portrait, responsive layouts, and reduced-motion support.
 - `script.js`: scroll reveals, navigation, cursor states, 3D tilt, project expansion, and clipboard feedback.
 - `public/assets/`: original portrait and downloadable resume.
 
