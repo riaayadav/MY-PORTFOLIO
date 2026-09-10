@@ -9,7 +9,7 @@ Install with `pnpm install`, then use `pnpm dev`. Build with `pnpm build`; `pnpm
 ## Edit
 
 - `index.html`: content, links, and all seven portfolio sections.
-- `style.css` and `tech.css`: charcoal, cyan and electric-blue theme, responsive layouts, keyframes, and reduced-motion support.
+- `style.css`, `tech.css`, and `reference-layout.css`: charcoal-and-orange theme, floating numbered navigation, textured monochrome portrait, responsive layouts, and reduced-motion support.
 - `script.js`: scroll reveals, navigation, cursor states, 3D tilt, project expansion, and clipboard feedback.
 - `public/assets/`: original portrait and downloadable resume.
 
@@ -19,4 +19,4 @@ The starter's component dependencies remain available for future development; th
 
 ## Portrait
 
-The minimal hero displays the original full square photo in a simple frame. There is no robotic transformation, image hover effect, dragging, or rotation.
+The minimal hero displays the original full square photo with a monochrome, dotted visual treatment. There is no robotic transformation, dragging, or rotation. The layout is inspired by the user-provided reference at https://legend-akshat.vercel.app/ and retains Riya's own content and assets.
