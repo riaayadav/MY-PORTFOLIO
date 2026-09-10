@@ -1,5 +1,3 @@
-import { initPortrait } from './portrait.js';
-initPortrait(document.querySelector('.portrait-switch'));
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
 const menu = document.querySelector('.menu-toggle');
